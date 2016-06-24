@@ -16,12 +16,40 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    UIAlertController *alter = [UIAlertController alertControllerWithTitle:@"提示" message:@"这是系统的弹框" preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+        NSLog(@"取消操作");
+        
+    }];
+    
+    UIAlertAction *requireAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+        NSLog(@"确定操作");
+        
+    }];
+    
+    
+    [alter addAction:cancelAction];
+    
+    [alter addAction:requireAction];
+    
+    //KVO 修改颜色
+    [cancelAction setValue:[UIColor redColor] forKey:@"titleTextColor"];
+    [requireAction setValue:[UIColor redColor] forKey:@"titleTextColor"];
+    
+    [self presentViewController:alter animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
 }
 
 @end
