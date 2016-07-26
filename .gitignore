@@ -1,0 +1,12 @@
+build/*
+binhai/binhai.xcworkspace/*
+binhai/binhai.xcodeproj/*
+binhai/Pods/Pods.xcodeproj/*
+binhai/iOSInjectionProject/*
+*.pbxuser
+*.mode1v3
+*.xcodeproj/xcuserdata/*
+*.xcodeproj/project.xcworkspace/xcuserdata/*
+.DS_Store
+profile
+
