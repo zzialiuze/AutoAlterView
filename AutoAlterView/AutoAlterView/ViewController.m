@@ -44,6 +44,9 @@
     [cancelAction setValue:[UIColor redColor] forKey:@"titleTextColor"];
     [requireAction setValue:[UIColor redColor] forKey:@"titleTextColor"];
     
+    
+    NSLog(@"testBranch");
+    
     [self presentViewController:alter animated:YES completion:nil];
 }
 
