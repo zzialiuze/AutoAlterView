@@ -46,6 +46,9 @@
     
     
     NSLog(@"testBranch");
+        NSLog(@"testBranch");
+        NSLog(@"testBranch");
+        NSLog(@"testBranch");
     
     [self presentViewController:alter animated:YES completion:nil];
 }
